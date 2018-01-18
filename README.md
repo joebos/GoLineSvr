@@ -1,4 +1,6 @@
-# Line Server written in Go
+# Line Server
+
+This readme file is same as in golinesvr repo. You only need to read once.
 
 <p>Python implementation: https://github.com/joebos/pylineserver</p>
 <p>Golang implementation: https://github.com/joebos/golinesvr  (This repo)</p>
