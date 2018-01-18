@@ -5,6 +5,10 @@
 
 <p>Load testing tool (Go): https://github.com/joebos/goloadtester</p>
 
+Environment (developed and tested):
+go version go1.9.2 linux/amd64
+pip 9.0.1 from /home/white/env27b/lib/python2.7/site-packages (python 2.7)
+
 
 <h2>1. How does your system work? (if not addressed in comments in source)</h2>
 
