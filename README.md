@@ -20,6 +20,9 @@ This is same as the typical HTTP server architecture - spawn a new thread for ev
 
 I originally planned to write the system just in Python. After I wrote a load test to test my Python line server, and learned a great deal of goroutine/channel as such a simple way to implement concurrency. I became interested in what would be the difference between Go and Python if I write the same system in both language, so I wrote both. And this is the Go version. A goroutine runs on thread so this implementation uses thread too.
 
+I did not go with treading approach with Python as Python uses GIL lock and there is no real threading concurrency in Python. 
+However, it might still work as this line server is more IO intensive instead of CPU intensive with a small number of connections. As # of connections/requests increases, it will more CPU bound and I think python threading will not work in terms of performance.
+
 In terms of handling text file, the system pre-processes it and builds an index first. The index is similar to the cluster index we see in relational database. The key (primary key) is the line number, and the value is the file offset of a line from the start of the text file. 
 
 In order to deal with a large number of lines where all the line numbers could not fit in memory, the system splits the index into index page files. Each index page file stores the file offsets for m number of lines (m is configurable in configuration.go). If a text file has more than m lines, the system does n/m to determine which index file, and use n % m to determine the index(file offset) for line n.
