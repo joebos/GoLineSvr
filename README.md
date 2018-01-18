@@ -1,9 +1,9 @@
 # Line Server written in Go
 
-Python implementation: https://github.com/joebos/pylineserver
-Golang implementation: https://github.com/joebos/golinesvr  (This repo)
+<p>Python implementation: https://github.com/joebos/pylineserver</p>
+<p>Golang implementation: https://github.com/joebos/golinesvr  (This repo)</p>
 
-Load testing tool (Go): https://github.com/joebos/goloadtester
+<p>Load testing tool (Go): https://github.com/joebos/goloadtester</p>
 
 
 <h2>1. How does your system work? (if not addressed in comments in source)</h2>
